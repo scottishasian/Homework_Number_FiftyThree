@@ -9,9 +9,14 @@ var arrayTasks = {
 		return arr;
 	},
 
-	// square: function (arr) {
+	square: function (arr) {
+		let newArray = [];
+		arr.forEach(function(number){
+			newArray.push(number * number)
+		});
+		return newArray;
 
-	// },
+	},
 
 	// sum: function (arr) {
 
