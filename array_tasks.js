@@ -24,13 +24,27 @@ var arrayTasks = {
 
 	},
 
-	// findDuplicates: function (arr) {
+	findDuplicates: function (arr) {  //Had to use internet help.
+		let newArray = [];
+		arr.forEach(function(number, index) {
+			if(arr.indexOf(number, index + 1) > -1){
+				if(newArray.indexOf(number) === -1){
+					newArray.push(number);
+				}
+			};
+		})
+		return newArray;
+	},
 
-	// },
-
-	// removeAndClone: function (arr, valueToRemove) {
-
-	// },
+	removeAndClone: function (arr, valueToRemove) {
+		let newArray = [];
+		arr.filter(function(number){
+			if(number != valueToRemove){
+				newArray.push(number);
+			}
+		})
+		return newArray;
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 
