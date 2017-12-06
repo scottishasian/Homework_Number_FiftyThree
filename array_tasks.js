@@ -19,7 +19,7 @@ var arrayTasks = {
 	},
 
 	sum: function (arr) {
-		const result = arr.reduce((total, amount) => total + amount);
+		let result = arr.reduce((total, amount) => total + amount);
 		return result;
 
 	},
@@ -47,12 +47,36 @@ var arrayTasks = {
 	},
 
 	// findIndexesOf: function (arr, itemToFind) {
-
+	// 	let newArray = [];
+  //
+	// 	arr.findIndex(function(number){
+	// 		if(number === itemToFind){
+	// 			newArray.push(number)
+	// 		}
+	// 	});
+  //
+	// 	return newArray;
+  //
 	// },
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
 
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		let newArray = [];
+		let newerArray = [];
+		let count = 0;
+		arr.filter(function(number){
+			if(number % 2 === 0){
+				newArray.push(number)
+				}
+		})
+		newArray.forEach(function(number){
+			let result = number * number;
+			newerArray.push(result);
+		})
+		let added = newerArray.reduce((total, amount) => total + amount);
+
+		return added;
+	}
 
 }
 
