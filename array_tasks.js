@@ -46,18 +46,20 @@ var arrayTasks = {
 		return newArray;
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-	// 	let newArray = [];
-  //
-	// 	arr.findIndex(function(number){
-	// 		if(number === itemToFind){
-	// 			newArray.push(number)
-	// 		}
-	// 	});
-  //
-	// 	return newArray;
-  //
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		let newArray = [];
+		var index = 0;
+
+		arr.findIndex(function(number){
+			if(number === itemToFind){
+				newArray.push(index)
+			}
+			index++;
+		});
+
+		return newArray;
+
+	},
 
 
 	sumOfAllEvenNumbersSquared: function (arr) {
